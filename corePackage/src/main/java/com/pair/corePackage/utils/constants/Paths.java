@@ -6,4 +6,8 @@ public class Paths {
     public static class Customer {
         public static final String ServiceBasePackage = "com.pair.customerService";
     }
+
+    public static class Auth {
+        public static final String ServiceBasePackage = "com.pair.authService";
+    }
 }

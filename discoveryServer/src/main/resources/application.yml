@@ -1,0 +1,9 @@
+spring:
+  config:
+    import: configserver:${configurl}
+  application:
+    name: discoveryserver
+  cloud:
+    config:
+      profile: dev
+configurl: http://localhost:8050/
