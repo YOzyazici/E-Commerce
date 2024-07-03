@@ -1,11 +1,11 @@
 spring:
   application:
-    name: configServer
+    name: configserver
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/YOzyazici/E-Commerce.git
+          uri: https://github.com/YOzyazici/ECommerce-config-server.git
   profiles:
     active: dev
 server:
