@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  authdevdb:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: authdev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+    ports:
+      - "5433:5432"  # Host portunu container'ın varsayılan portu olan 5432'ye bağlama
+    volumes:
+      - auth_db_data:/var/lib/postgresql/data
+
+  customerdevdb:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: customerdev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+    ports:
+      - "5434:5432"  # Host portunu container'ın varsayılan portu olan 5432'ye bağlama
+    volumes:
+      - customer_db_data:/var/lib/postgresql/data
+
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8060:80"  
+
+volumes:
+  auth_db_data:
+  customer_db_data:
+ 
