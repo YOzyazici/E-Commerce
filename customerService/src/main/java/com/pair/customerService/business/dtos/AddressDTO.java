@@ -18,7 +18,7 @@ public class AddressDTO {
 
     private String houseFlatNumber;
 
-    private String description;
+    private String desc;
 
     private int customerId;
 

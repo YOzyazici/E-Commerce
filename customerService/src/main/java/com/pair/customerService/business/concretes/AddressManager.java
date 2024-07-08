@@ -15,8 +15,8 @@ public class AddressManager implements AddressService {
 
     @Override
     public AddressDTO add(AddressDTO addressDTO) {
-        Address address = AddressMapper.INSTANCE.AddressDTOtoAddressEntity(addressDTO);
+        Address address = AddressMapper.INSTANCE.DtoToEntity(addressDTO);
         addressRepository.save(address);
-        return AddressMapper.INSTANCE.AddresstoAddressDTO(address);
+        return AddressMapper.INSTANCE.EntityToDto(address);
     }
 }
