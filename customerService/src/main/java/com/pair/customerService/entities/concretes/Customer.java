@@ -13,12 +13,12 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "customer")
-public class Customer extends BaseEntity{
+public class Customer extends BaseEntity {
 
     @Column(name = "email")
     private String email;
 
-    @Column(name ="phone_number")
+    @Column(name = "phone_number")
     private String phoneNumber;
 
     @Column(name = "is_active")
@@ -32,9 +32,5 @@ public class Customer extends BaseEntity{
 
     @OneToMany(mappedBy = "customer")
     private List<Address> addresses;
-
-
-
-
 
 }

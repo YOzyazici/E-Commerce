@@ -1,16 +1,17 @@
 package com.pair.customerService.business.dtos;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class AddressDTO {
 
-    private int cityId;
+    private UUID cityId;
 
     private String cityName;
 
@@ -20,7 +21,6 @@ public class AddressDTO {
 
     private String desc;
 
-    private int customerId;
-
+    private UUID customerId;
 
 }
